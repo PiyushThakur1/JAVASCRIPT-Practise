@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style="background-color: #212121; color: #fff;" >
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').
+        appendChild(li)
+    }
+    addLang("Python")
+    addLang("typescript")
+
+    function optlang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').
+        appendChild(li)
+    }
+
+    optlang('golang')
+
+    // Edit
+
+    const scdLang = document.querySelector("li:nth-child(2)")
+    // scdLang.innerHTML = "mojo"
+    const newli = document.createElement("li")
+    newli.textContent = "mojo"
+    scdLang.replaceWith(newli)
+
+    //edit
+
+    const istl = document.querySelector("li:first-child")
+    istl.outerHTML = '<li>TYpescript</li>'
+
+    //remove
+
+    const lasLang = document.querySelector("li:last-child")
+    lasLang.remove()
+
+</script>
+</html>
