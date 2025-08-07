@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script>
+      let who = prompt("who is there");
+
+      if (who === "admin") {
+        let login = prompt("Password");
+        if ((login === "themaster")) {
+          alert("welcome");
+        } else if (login === null) {
+          alert("canacled");
+        } else {
+          alert("Wrong password");
+        }
+      } else if (who === null) {
+        alert("canceled");
+      } else {
+        alert("i dont know you");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
